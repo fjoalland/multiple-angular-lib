@@ -26,11 +26,12 @@ npm install
 npm link @libs/lib1
 ng build
 ```
+You should get an error here:
 
-Install and build the lib3
-```bash
-cd lib3
-npm install
-npm link @libs/lib1
-ng build
+```
+[error] Error: : Unexpected value 'Lib1Module in D:/Documents/multiple-angular-lib/lib1/dist/libs/lib1/libs-lib1.d.ts' imported by the module 'Lib2Module in D:/Documents/multiple-angular-lib/lib2/projects/libs/lib2/src/lib/lib2.module.ts'. Please add a @NgModule annotation.
+
+    at Object.<anonymous> (D:\Documents\multiple-angular-lib\lib2\node_modules\ng-packagr\lib\ngc\compile-source-files.js:73:19)
+    at Generator.next (<anonymous>)
+    at fulfilled (D:\Documents\multiple-angular-lib\lib2\node_modules\ng-packagr\lib\ngc\compile-source-files.js:4:58)
 ```
